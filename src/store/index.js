@@ -29,7 +29,9 @@ export default new Vuex.Store({
       } else {
         return state.list.filter(item => item.done)
       }
-    }
+    },
+    token: state => state.user.token,
+    name: state => state.setting.name
   },
   mutations: {
     add(state) {
@@ -116,5 +118,27 @@ export default new Vuex.Store({
     }
   },
   modules: {
+    user: {
+      state: {
+        token: '12345'
+      },
+      mutations: {
+        //  这里的state表示的是user的state
+        updateToken(state, token) {
+          state.token = token
+        }
+      }
+    },
+    setting: {
+      state: {
+        name: 'Vuex modules'
+      },
+      namespaced: true,
+      mutations: {
+        updateName(state, name) {
+          state.name = name
+        }
+      }
+    }
   }
 })
