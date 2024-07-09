@@ -1,28 +1,30 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h2>vuex 基础</h2>
+    <my-addition></my-addition>
+    <hr/>
+    <my-subtraction></my-subtraction>
+    <hr/>
+    <h2>vuex 案例</h2>
+    <to-do-list></to-do-list>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import addition from './components/addition.vue';
+import subtraction from './components/subtraction.vue';
+import toDoList from './components/toDoList.vue'
 export default {
-  name: 'App',
   components: {
-    HelloWorld
+    'my-addition': addition,
+    'my-subtraction': subtraction,
+    'to-do-list': toDoList
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+  padding: 16px;
 }
 </style>
