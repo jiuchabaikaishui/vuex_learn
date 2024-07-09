@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations, createNamespacedHelpers } from "vuex";
+import { mapGetters, mapMutations, createNamespacedHelpers } from 'vuex';
 const { mapMutations: settingMutations } = createNamespacedHelpers('setting')
 
 const result = {
